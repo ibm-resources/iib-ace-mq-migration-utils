@@ -35,7 +35,7 @@ echo Stopping integration node standby instance on second host...
 ACE_NODE_STANDBY_STOP_CMD="
 echo "$ON_HOST_BANNER"
 mqsistop $NODE_NAME
-mqsilist $NODENAME
+mqsilist $NODE_NAME
 "
 run_on_host2_ace "$ACE_NODE_STANDBY_STOP_CMD"
 echo ----------------------------------------------------------
@@ -60,7 +60,7 @@ echo ----------------------------------------------------------
 echo
 
 # Delete integration node directory on shared storage
-echo Deleting integration node directory on shared storeage...
+echo Deleting integration node directory on shared storage...
 NODE_DIR=${SHARED_FS}/${NODE_NAME}
 rm -rf $NODE_DIR
 echo ----------------------------------------------------------

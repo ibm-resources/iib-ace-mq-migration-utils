@@ -24,7 +24,7 @@ SCRIPT_DIR="$(dirname $0)"
 
 echo ----------------------------------------------------------
 # Create integration node directory on shared storage
-echo Creating integration node directory on shared storeage ...
+echo Creating integration node directory on shared storage ...
 NODE_DIR=${SHARED_FS}/${NODE_NAME}
 mkdir -p $NODE_DIR
 chown -R $ACE_USER:mqbrkrs $NODE_DIR
@@ -67,7 +67,7 @@ echo Starting integration node standby instance on second host...
 ACE_NODE_STANDBY_START_CMD="
 echo $ON_HOST_BANNER
 mqsistart $NODE_NAME
-mqsilist $NODENAME
+mqsilist $NODE_NAME
 "
 run_on_host2_ace "$ACE_NODE_STANDBY_START_CMD"
 echo ----------------------------------------------------------
